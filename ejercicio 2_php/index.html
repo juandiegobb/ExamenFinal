@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Vueltas de Corredores</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora de Vueltas</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora de Vueltas de Corredores</h1>
-        <form action="index.php" method="POST">
-            <label for="vueltas">Número total de vueltas:</label>
-            <input type="number" name="vueltas" id="vueltas" required>
+        <h1>Calculadora de Vueltas de los Corredores</h1>
+        <form action="calculo.php" method="POST">
+            <label for="vueltas">Número de Vueltas:</label>
+            <input type="number" id="vueltas" name="vueltas" min="1" required>
+            
+            <label for="tiempoA">Tiempo de Corredor A (en minutos por vuelta):</label>
+            <input type="number" id="tiempoA" name="tiempoA" min="1" required>
 
-            <label for="tiempo_a">Tiempo que tarda el Corredor A en una vuelta (en minutos):</label>
-            <input type="number" name="tiempo_a" id="tiempo_a" required>
+            <label for="tiempoB">Tiempo de Corredor B (en minutos por vuelta):</label>
+            <input type="number" id="tiempoB" name="tiempoB" min="1" required>
 
-            <label for="tiempo_b">Tiempo que tarda el Corredor B en una vuelta (en minutos):</label>
-            <input type="number" name="tiempo_b" id="tiempo_b" required>
-
-            <input type="submit" value="Calcular">
+            <button type="submit">Calcular</button>
         </form>
+        
     </div>
+    
 </body>
 </html>
-
 
 
 
